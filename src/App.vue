@@ -1,8 +1,7 @@
 <template>
   <div>
-    <span>导航</span> |
-    <router-link to="/">lqve1</router-link> |
-    <router-link to="/xxx">lqve2</router-link>
+    <router-link to="/">home</router-link> |
+    <router-link to="/doc">doc</router-link>
   </div>
   <hr/>
   <router-view />

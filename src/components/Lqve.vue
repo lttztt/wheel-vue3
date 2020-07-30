@@ -1,5 +1,0 @@
-<template>
-  <div>
-    lqve 1
-  </div>
-</template>

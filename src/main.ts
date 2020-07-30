@@ -2,8 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import './index.css'
 
-import Lqve from './components/Lqve.vue'
-import Lqve2 from './components/Lqve2.vue'
+import Home from './components/Home.vue'
+import Doc from './components/Doc.vue'
 
 import {createWebHashHistory, createRouter} from 'vue-router'
 
@@ -14,11 +14,11 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      component: Lqve
+      component: Home
     },
     {
-      path: '/xxx',
-      component: Lqve2
+      path: '/doc',
+      component: Doc
     },
   ]
 })
