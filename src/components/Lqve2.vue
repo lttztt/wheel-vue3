@@ -1,5 +1,5 @@
 <template>
   <div>
-    lqve 1
+    lqve 2
   </div>
 </template>
