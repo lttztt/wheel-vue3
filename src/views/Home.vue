@@ -1,7 +1,8 @@
 <template>
     <div>
         <Topnav />
-        <div class="banner">
+        <div>{{menuVisible}}</div>
+        <div class="banner" v-if="menuVisible">
             <h1>禅UI</h1>
             <h2>一个随性的UI框架</h2>
             <p class="actions">
@@ -13,10 +14,15 @@
 </template>
 <script lang="ts">
 import Topnav from "../components/Topnav.vue";
+import {inject, Ref} from 'vue'
 export default {
     components: {
         Topnav,
     },
+    setup() {
+      const menuVisible = inject<Ref<boolean>>('menuVisible')
+      return {menuVisible}
+    }
 };
 </script>
 <style lang="scss" scoped>
