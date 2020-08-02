@@ -1,13 +1,12 @@
 <template>
     <div>
         <Topnav />
-        <div>{{menuVisible}}</div>
         <div class="banner" v-if="menuVisible">
             <h1>禅UI</h1>
             <h2>一个随性的UI框架</h2>
             <p class="actions">
-                <a href="#">Github</a>
-                <a href="#">Get Start</a>
+                <a href="https://github.com" target="_bank">Github</a>
+                <router-link to="/doc">开始</router-link>
             </p>
         </div>
     </div>
