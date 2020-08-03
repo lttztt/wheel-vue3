@@ -15,6 +15,7 @@
 import Topnav from "../components/Topnav.vue";
 import {inject, Ref} from 'vue'
 export default {
+    name: 'Home',
     components: {
         Topnav,
     },

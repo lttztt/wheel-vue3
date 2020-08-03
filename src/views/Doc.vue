@@ -19,7 +19,9 @@
           </li>
         </ol>
       </aside>
-      <main>内容</main>
+      <main>
+        <router-view />
+      </main>
     </div>
   </div>
 </template>
@@ -27,6 +29,7 @@
 import Topnav from '../components/Topnav.vue'
 import {inject, Ref} from 'vue'
 export default {
+  name: 'Doc',
   components: {
     Topnav
   },
