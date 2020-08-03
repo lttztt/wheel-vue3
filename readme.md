@@ -1,5 +1,21 @@
 # vue3 的基础轮子
 
+## 使用vite搭建官网
+
+*安装命令行工具*
+
+`yarn global add create-vite-app`
+
+*知识点*
+
+- Vue 3 的 Template 支持多个根标签，Vue 2 不支持
+- Vue 3 有 createApp()，而 Vue 2 的是 new Vue()
+- createApp(组件)，new Vue({template, render})
+- index.html文件中引入js文件使用了`type="module"`
+- npm的info命令使用`npm info vue-router versions`查看包的所有标本
+- 使用provide和inject
+
+
 ## switch轮子
 
 1. 明确需求，设计原型（借鉴其他ui框架）
