@@ -8,9 +8,7 @@
 import { ref } from "vue";
 export default {
     props: {
-        value: {
-            type: Boolean,
-        },
+        value: Boolean,
     },
     setup(props, context) {
         const toggleChecked = () => {
@@ -22,42 +20,45 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$h: 22px;
+$h2: $h - 4px;
 button {
-    width: 40px;
-    height: 20px;
+    height: $h;
+    width: $h * 2;
+    border: none;
     background: #bfbfbf;
-    border-radius: 20px;
+    border-radius: $h / 2;
     position: relative;
     transition: all 250ms;
     span {
         position: absolute;
         left: 2px;
         top: 2px;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
+        width: $h2;
+        height: $h2;
+        border-radius: $h2 / 2;
         background: #fff;
         transition: all 250ms;
     }
     &.checked {
         background: #1890ff;
         > span {
-            left: calc(100% - #{20px} + 2px);
+            left: calc(100% - #{$h2} - 2px);
         }
     }
-}
-button:focus {
-    outline: none;
-}
-button:active {
-    > span {
-        width: 14px + 4px;
+    &:focus {
+        outline: none;
     }
-}
-button.checked:active {
-    > span {
-        width: 14px + 4px;
-        margin-left: -4px;
+    &:active {
+        > span {
+            width: $h2 + 4px;
+        }
+    }
+    &.checked:active {
+        > span {
+            width: $h2 + 4px;
+            margin-left: -4px;
+        }
     }
 }
 </style>
